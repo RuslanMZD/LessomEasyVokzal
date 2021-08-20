@@ -13,12 +13,22 @@ public class Main {
         sklad.addTovar(tovar1,500);
         sklad.addTovar(tovar2,200);
         sklad.addTovar(tovar3,700);
-        sklad.deleteTovar(tovar1,100);
-        sklad.printAllTovar();
-        System.out.println(sklad.getMinCountTovar());
+        sklad.addTovar(tovar4,300);
+        sklad.addTovar(tovar5,150);
 
 
-        System.out.println();
+
+
+
+//        sklad.deleteTovar(tovar1,100);
+//        sklad.printAllTovar();
+//        System.out.println(sklad.getMinCountTovar());
+        System.out.println(sklad.getRichTovar());
+
+        System.out.println(sklad.allSummTovarOnSkladFormatDouble());
+        System.out.println(sklad.allSummTovarOnSkladFormatInt());
+
+
 
     }
 }

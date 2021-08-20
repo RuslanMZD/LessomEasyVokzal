@@ -1,6 +1,6 @@
 package lesson16;
 
-import javax.sound.midi.Soundbank;
+;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -54,7 +54,8 @@ public class Sklad {
             if(result==null){
                 result=t;
             }else{
-                if(tovars.get(result)<tovars.get(t)){
+
+                if(tovars.get(result)>tovars.get(t)){
                     result=t;
                 }
 
@@ -66,8 +67,51 @@ public class Sklad {
         return result;
     }
 
-    //вернуть самый дорогой товар
-    // посчитать общую стоимость товара на складе
+    public Tovar getRichTovar(){
+        Tovar result = null;
+        for(Map.Entry<Tovar,Integer> pair : tovars.entrySet()){
+            if(result==null){
+                result=pair.getKey();
+            }
+            if(pair.getKey().getPrice()> result.getPrice()){
+                result= pair.getKey();
+            }
+
+
+        }
+
+        return result;
+    }
+
+
+    public double allSummTovarOnSkladFormatDouble(){
+        double result = 0;
+
+        for(Map.Entry<Tovar, Integer> pair : tovars.entrySet()){
+
+            result+= (double) pair.getValue() * pair.getKey().getPrice();
+        }
+
+
+
+        return result;
+    }
+
+
+    public int allSummTovarOnSkladFormatInt(){
+        int result = 0;
+
+        for(Map.Entry<Tovar, Integer> pair : tovars.entrySet()){
+
+            result+= pair.getValue() * pair.getKey().getPrice();
+        }
+
+
+
+        return result;
+    }
+
+
     
 
 }
