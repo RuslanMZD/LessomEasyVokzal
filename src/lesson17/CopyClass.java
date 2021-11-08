@@ -12,21 +12,22 @@ public class CopyClass implements CopyUtills{
         File sourceDir = new File(from);
         File destDir = new File(to);
 //________________1__________________________
-//        long start =  System.currentTimeMillis();
-//        Files.copy(sourceDir.toPath(),destDir.toPath());
-//        long end =  System.currentTimeMillis();
-//        System.out.println(end-start + " 1ый");
-//
-//        ________________2__________________________
-        long start =  System.currentTimeMillis();
-        InputStream is = new FileInputStream(sourceDir);
-        OutputStream os = new FileOutputStream(destDir);
-        byte[] buffer = new byte[4096];
-        int length;
 
-        while ((length = is.read(buffer)) > 0) {
-            os.write(buffer, 0, length);
-        }
+        long start =  System.currentTimeMillis();
+        Files.copy(sourceDir.toPath(),destDir.toPath());
+        long end =  System.currentTimeMillis();
+        System.out.println(end-start + " 1ый");
+
+//        ________________2__________________________
+//        long start =  System.currentTimeMillis();
+//        InputStream is = new FileInputStream(sourceDir);
+//        OutputStream os = new FileOutputStream(destDir);
+//        byte[] buffer = new byte[4096];
+//        int length;
+//
+//        while ((length = is.read(buffer)) > 0) {
+//            os.write(buffer, 0, length);
+//        }
 
 
 
@@ -39,11 +40,11 @@ public class CopyClass implements CopyUtills{
 //        }
 //_______________________________________
 
-        is.close();
-        os.close();
-
-        long end =  System.currentTimeMillis();
-        System.out.println(end-start + " 2ой");
+//        is.close();
+//        os.close();
+//
+//        long end =  System.currentTimeMillis();
+//        System.out.println(end-start + " 2ой");
 
 
 
