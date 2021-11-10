@@ -1,0 +1,14 @@
+body{
+    color:white;
+    background-color: black !important; 
+    
+}
+a {
+    color:gold;
+    text-decoration: none;
+}
+
+a:hover{
+    color: blueviolet;
+    text-decoration: none;
+}

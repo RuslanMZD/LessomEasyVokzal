@@ -8,5 +8,7 @@ public class Main {
 
        cwg.copy("test1.jpg","testGuawa.jpg");
 
+
+
     }
 }
